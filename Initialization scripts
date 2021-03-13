@@ -1,0 +1,35 @@
+For the successful setup of the application (Windows):
+
+ 1. Download and install the latest POSTGRE SQL from "https://www.postgresql.org/download/" and select the respective OS(Windows) for your machine and
+    create a database with any name (This requires an extra change in the application which is explained at the end of this file) or simply "AMD" with password "mypass",
+    then, initialize the database with the script given in the file "AMD_DB.sql".
+ 
+ 2. Similarly, download and install Node JS from "https://nodejs.org/en/download/" and follow the default prompts given while 
+    installation except select "npm package manager" at the "Common Setup" step.
+ 	
+    Note: To ensure proper installation of node in your system open node js command prompt installed in your system and type "node -v" ---> This should show you 
+	  the installed version of node in your system. Also, go to Environment variables, check if this (C:\Program Files\nodejs\) is added to the "Path" variable.
+ 
+ 3. Now, open command prompt
+	-> navigate to the the application folder i.e.,using "cd (folder location)\AMDProject\pizzaAMDProject\server"
+	-> run "npm install" and click enter.
+	-> This installs node_modules in the respective folder. (Warnings can be ignored)
+ 
+ 4. Then we can open command prompt again or simply go back to "pizza" folder in the application in the same command prompt and 
+    execute the above step-3 for "cd (folder location)\AMDProject\pizzaAMDProject\pizza".
+
+ 5. To actually start the application:
+	-> Open command prompt and navigate to this path using "cd (folder location)\AMDProject\pizzaAMDProject\server" and run "node index.js".
+	-> Open another command prompt and navigate to this path using "cd (folder location)\AMDProject\pizzaAMDProject\pizza and run "npm start". 
+		(This directly opens the application frontend on localhost 3000.)
+	
+
+Note: The above step-5 starts an express node server and a frontend server required for the application and these servers should be running until we close the application
+
+******
+
+If your database has a different name or password compared to the above details, then change the file named "api.js" accordingly which is located in the server folder of the application.
+i.e. password: "(your password here)",
+     database: "(your database name here)"
+
+******
