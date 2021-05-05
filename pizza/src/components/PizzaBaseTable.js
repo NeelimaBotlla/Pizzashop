@@ -110,7 +110,7 @@ const PizzaBaseTable = () => {
                             <td>{base.price} €</td>
                             <td>
                                 <Fragment>
-                                    <button type="button" className="btn btn-warning" data-toggle="modal" data-target={`#base${base.id}`}>
+                                    <button type="button" className="btn btn-warning" data-toggle="modal" data-target={`#base${base.id}`} onClick={() => handleClose(base.size, base.price)}>
                                         Edit
                                     </button>
                                     <div className="modal" id={`base${base.id}`}>
